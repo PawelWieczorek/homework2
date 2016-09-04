@@ -38,4 +38,53 @@ public class Card {
     public int getSuit() {
         return suit;
     }
+
+    public String toString() {
+        String rank;
+        String suit;
+
+        switch (this.rank) {
+            case ACE:
+                rank = "Ace";
+                break;
+
+            case KING:
+                rank = "King";
+                break;
+
+            case QUEEN:
+                rank = "Queen";
+                break;
+
+            case JACK:
+                rank = "Jack";
+                break;
+
+            default:
+                rank = "Wrong Rank!";
+        }
+
+        switch (this.suit) {
+            case DIAMONDS:
+                suit = "Diamonds";
+                break;
+
+            case CLUBS:
+                suit = "Clubs";
+                break;
+
+            case SPADES:
+                suit = "Spades";
+                break;
+
+            case HEARTS:
+                suit = "Hearts";
+                break;
+
+            default:
+                suit = "Wrong suit!";
+        }
+
+        return rank + " - " + suit;
+    }
 }
